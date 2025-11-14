@@ -33,11 +33,11 @@ const translations = {
     "footer.news": "News",
     "footer.contact_link": "Contact",
     "footer.email": "Email",
-    "footer.email_address": "info@laformulacq.net",
+    "footer.email_address": "contact@laformulacq.net",
     "footer.phone": "Phone",
-    "footer.phone_number": "+1 (555) 123-4567",
+    "footer.phone_number": "",
     "footer.office": "Office",
-    "footer.office_location": "Global Business Center",
+    "footer.office_location": "New york United States of America",
     "about.title": "About La Formula Capital Group",
     "about.description": "We are a specialized consulting firm dedicated to enhancing business efficiency and competitiveness through innovative B2B solutions. Our comprehensive approach combines strategic planning, process optimization, and cutting-edge technology to deliver measurable results.",
     "about.focus": "With a focus on corporate structure development, global business centralization, and strategic partnerships, we empower organizations to achieve their full potential in today's competitive marketplace.",
@@ -208,12 +208,12 @@ const translations = {
     "privacy.rights_withdraw": "The right to withdraw consent",
     "privacy.contact_title": "4. Contact Us",
     "privacy.contact_text": "If you have any questions about this Privacy Policy, please contact us:",
-    "privacy.contact_email": "Email: web@laformulacg.net",
-    "privacy.contact_location": "Location: United States",
+    "privacy.contact_email": "Email: contact@laformulacq.net",
+    "privacy.contact_location": "Location: New york United States of America",
     
     // Common
     "common.back_to_home": "Back to Home",
-    "common.location": "United States",
+    "common.location": "New york United States of America",
     
     // Cookies Page
     "cookies.page_title": "Cookies Policy",
@@ -239,8 +239,8 @@ const translations = {
     "cookies.third_party_content": "In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the website and deliver advertisements on and through the website.",
     "cookies.contact_title": "5. Contact Us",
     "cookies.contact_text": "If you have any questions about this Cookies Policy, please contact us:",
-    "cookies.contact_email": "Email: web@laformulacg.net",
-    "cookies.contact_location": "Location: United States"
+    "cookies.contact_email": "Email: contact@laformulacq.net",
+    "cookies.contact_location": "Location: New york United States of America"
   },
   es: {
     "header.services": "Servicios",
@@ -276,11 +276,11 @@ const translations = {
     "footer.news": "Noticias",
     "footer.contact_link": "Contacto",
     "footer.email": "Correo",
-    "footer.email_address": "info@laformulacq.net",
+    "footer.email_address": "contact@laformulacq.net",
     "footer.phone": "Teléfono",
-    "footer.phone_number": "+1 (555) 123-4567",
+    "footer.phone_number": "",
     "footer.office": "Oficina",
-    "footer.office_location": "Centro de Negocios Global",
+    "footer.office_location": "New york United States of America",
     "about.title": "Acerca de La Formula Capital Group",
     "about.description": "Somos una firma de consultoría especializada dedicada a mejorar la eficiencia y competitividad de los negocios mediante soluciones B2B innovadoras. Nuestro enfoque integral combina planificación estratégica, optimización de procesos y tecnología de punta para entregar resultados medibles.",
     "about.focus": "Con un enfoque en el desarrollo de estructuras corporativas, centralización de negocios globales y asociaciones estratégicas, empoderamos a las organizaciones para alcanzar su máximo potencial en el competitivo mercado actual.",
@@ -415,7 +415,7 @@ const translations = {
     
     // Common
     "common.back_to_home": "Volver al Inicio",
-    "common.location": "Estados Unidos",
+    "common.location": "New york United States of America",
     
     // Privacy Policy Page
     "privacy.page_title": "Política de Privacidad",
@@ -455,8 +455,8 @@ const translations = {
     "privacy.rights_withdraw": "El derecho a retirar el consentimiento",
     "privacy.contact_title": "4. Contáctenos",
     "privacy.contact_text": "Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos:",
-    "privacy.contact_email": "Correo: web@laformulacg.net",
-    "privacy.contact_location": "Ubicación: Estados Unidos",
+    "privacy.contact_email": "Correo: contact@laformulacq.net",
+    "privacy.contact_location": "Ubicación: New york United States of America",
     
     // Cookies Page
     "cookies.page_title": "Política de Cookies",
@@ -482,8 +482,8 @@ const translations = {
     "cookies.third_party_content": "Además de nuestras propias cookies, también podemos usar varias cookies de terceros para informar estadísticas de uso del sitio web y entregar anuncios en y a través del sitio web.",
     "cookies.contact_title": "5. Contáctenos",
     "cookies.contact_text": "Si tiene alguna pregunta sobre esta Política de Cookies, contáctenos:",
-    "cookies.contact_email": "Correo: web@laformulacg.net",
-    "cookies.contact_location": "Ubicación: Estados Unidos"
+    "cookies.contact_email": "Correo: contact@laformulacq.net",
+    "cookies.contact_location": "Ubicación: New york United States of America"
   }
 };
 

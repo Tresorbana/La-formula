@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 
@@ -23,17 +23,6 @@ export const Footer = () => {
             <p className="text-muted-foreground leading-relaxed">
               {t('footer.tagline') || 'Enhancing business efficiency and competitiveness with specialized B2B solutions. La Formula Capital Group - Your success is our formula.'}
             </p>
-            <div className="flex space-x-4">
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center hover:shadow-glow transition-all duration-300">
-                <Linkedin className="w-5 h-5 text-white" />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center hover:shadow-glow transition-all duration-300">
-                <Twitter className="w-5 h-5 text-white" />
-              </a>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center hover:shadow-glow transition-all duration-300">
-                <Facebook className="w-5 h-5 text-white" />
-              </a>
-            </div>
           </div>
 
           {/* Services */}
@@ -65,23 +54,14 @@ export const Footer = () => {
           {/* Contact */}
           <div className="space-y-6">
             <h3 className="text-lg font-semibold gradient-text">{t('footer.contact') || 'Contact'}</h3>
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-card rounded-lg flex items-center justify-center">
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">{t('footer.email') || 'Email'}</p>
-                  <p className="text-foreground">{t('footer.email_address') || 'info@laformulacg.net'}</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-card rounded-lg flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">{t('footer.phone') || 'Phone'}</p>
-                  <p className="text-foreground">{t('footer.phone_number') || '+1 (555) 123-4567'}</p>
+                  <p className="text-foreground">{t('footer.email_address') || 'contact@laformulacq.net'}</p>
                 </div>
               </div>
             </div>

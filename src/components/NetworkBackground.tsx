@@ -86,8 +86,8 @@ export const NetworkBackground = () => {
                 node.x, node.y,
                 connectedNode.x, connectedNode.y
               );
-              gradient.addColorStop(0, `hsla(351, 100%, 60%, ${opacity * 0.3})`);
-              gradient.addColorStop(1, `hsla(263, 70%, 65%, ${opacity * 0.3})`);
+              gradient.addColorStop(0, `hsla(351, 100%, 60%, ${opacity * 0})`);
+              gradient.addColorStop(1, `hsla(263, 70%, 65%, ${opacity * 0})`);
               
               ctx.strokeStyle = gradient;
               ctx.lineWidth = 1;
@@ -124,7 +124,7 @@ export const NetworkBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none opacity-60"
+      className="absolute inset-0 pointer-events-none opacity-60 hidden md:block"
       style={{ zIndex: 1 }}
     />
   );

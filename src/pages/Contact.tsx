@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Mail, Phone, MapPin, Send, ArrowLeft } from "lucide-react";
+import { Mail, MapPin, Send, ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -12,7 +12,6 @@ export const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     company: '',
     message: ''
   });
@@ -27,7 +26,7 @@ export const Contact = () => {
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
-      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+      setFormData({ name: '', email: '', company: '', message: '' });
       
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000);
@@ -125,21 +124,6 @@ export const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                    {t('contact.phone_label')}
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder={t('contact.phone_placeholder')}
-                    className="w-full px-4 py-3 bg-card border border-border/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                  />
-                </div>
-
-                <div>
                   <label htmlFor="company" className="block text-sm font-medium mb-2">
                     {t('contact.company_label')}
                   </label>
@@ -205,21 +189,8 @@ export const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">{t('footer.email')}</p>
-                      <a href="mailto:info@laformulacg.net" className="text-foreground hover:text-primary transition-colors">
+                      <a href="mailto:contact@laformulacq.net" className="text-foreground hover:text-primary transition-colors">
                         {t('footer.email_address')}
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Phone */}
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground mb-1">{t('footer.phone')}</p>
-                      <a href="tel:+15551234567" className="text-foreground hover:text-primary transition-colors">
-                        {t('footer.phone_number')}
                       </a>
                     </div>
                   </div>

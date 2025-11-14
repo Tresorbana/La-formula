@@ -14,7 +14,6 @@ import { TermsOfUse } from "./pages/TermsOfUse";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 import { Cookies } from "./pages/Cookies";
 import CanvasBackground from "./components/CanvasBackground";
-import CustomCursor from "./components/CustomCursor";
 import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -26,14 +25,10 @@ const LanguageRouter = ({ children }: { children: React.ReactNode }) => {
   // Ensure URL matches the current language
   useEffect(() => {
     const path = location.pathname;
-    if (path === '/spanish' && lang !== 'es') {
+    // If there is literally no path (rare), default to Spanish home
+    if (path === '') {
       setLanguage('es');
-    } else if (path === '/' && lang !== 'en') {
-      setLanguage('en');
-    } else if (path === '') {
-      // Handle root path
-      setLanguage('en');
-      window.history.replaceState({}, '', '/');
+      window.history.replaceState({}, '', '/spanish');
     }
   }, [location.pathname, lang, setLanguage]);
 
@@ -105,7 +100,6 @@ const AppContent = () => {
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <CustomCursor/>
       <CanvasBackground/>
       <Toaster />
       <Sonner />
