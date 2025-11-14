@@ -30,7 +30,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   // Use a ref to track if this is the initial render
   const isInitialRender = React.useRef(true);
-  const [lang, setLang] = useState<Language>('en');
+  const [lang, setLang] = useState<Language>('es');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
@@ -45,8 +45,11 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       const path = location.pathname;
       debugLog('Initializing language from path', { path });
       
-      // Check if path starts with /spanish
-      const newLang = path.startsWith('/spanish') ? 'es' : 'en';
+      // Only infer Spanish when URL explicitly uses /spanish; otherwise keep current language
+      let newLang: Language = lang;
+      if (path.startsWith('/spanish')) {
+        newLang = 'es';
+      }
       
       // Only update if the language is actually changing
       if (newLang !== lang) {

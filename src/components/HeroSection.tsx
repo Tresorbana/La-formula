@@ -6,23 +6,23 @@ export const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-28">
       <NetworkBackground />
       
-      {/* Main network globe background */}
+      {/* Main network globe background (desktop only) */}
       <div 
-        className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-90"
+        className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-90 hidden md:block"
         style={{ 
           backgroundImage: `url(${networkGlobe})`,
           zIndex: 2
         }}
       />
       
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background-light/80" style={{ zIndex: 3 }} />
+      {/* Background gradient overlay (desktop only) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background-light/80 hidden md:block" style={{ zIndex: 3 }} />
       
-      {/* Floating elements */}
-      <div className="absolute inset-0" style={{ zIndex: 3 }}>
+      {/* Floating elements (desktop only) */}
+      <div className="absolute inset-0 opacity-30 hidden md:block" style={{ zIndex: 3 }}>
         <div className="floating-element" style={{ top: '20%', left: '10%', animationDelay: '0s' }} />
         <div className="floating-element" style={{ top: '60%', left: '85%', animationDelay: '2s' }} />
         <div className="floating-element" style={{ top: '30%', left: '70%', animationDelay: '4s' }} />

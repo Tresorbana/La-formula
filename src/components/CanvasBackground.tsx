@@ -28,13 +28,15 @@ const CanvasBackground = () => {
 
     function draw() {
       if (!ctx) return;
+      const isMobile = window.innerWidth < 768;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Draw particles
       particles.forEach((p) => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "white";
+        // On small devices, make fill fully transparent
+        ctx.fillStyle = isMobile ? "rgba(255,255,255,0)" : "white";
         ctx.fill();
       });
 
@@ -46,7 +48,10 @@ const CanvasBackground = () => {
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < 120) {
             ctx.beginPath();
-            ctx.strokeStyle = "rgba(255,255,255,0.2)";
+            // On small devices, make stroke fully transparent
+            ctx.strokeStyle = isMobile
+              ? "rgba(255,255,255,0)"
+              : "rgba(255,255,255,0.2)";
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);

@@ -47,13 +47,13 @@ export const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to={lang === 'es' ? '/spanish' : '/'} className="flex items-center space-x-3">
-            <img
-              src="https://www.laformulacg.net/_next/image?url=%2Fimages%2Flogo%2Flogo.png&w=128&q=75"
-              alt="La Formula Capital Group"
-              className="h-20 w-auto cursor-pointer"
-              id="logo"
-            />
+          <Link to={lang === 'es' ? '/spanish' : '/'} className="flex items-center space-x-3 -mt-2">
+              <img
+                src="https://www.laformulacg.net/_next/image?url=%2Fimages%2Flogo%2Flogo.png&w=128&q=75"
+                alt="La Formula Capital Group"
+                className="h-24 w-auto object-contain"
+                id="logo"
+              />
           </Link>
 
           {/* Desktop Navigation */}
@@ -123,22 +123,14 @@ export const Header = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation - Fullscreen Drawer */}
+        {/* Mobile Navigation - Fullscreen Centered Menu */}
         {isMenuOpen && (
           <div
-            className="md:hidden fixed inset-0 z-[60] min-h-dvh"
+            className="md:hidden fixed inset-0 z-[60] min-h-dvh bg-background"
             role="dialog"
             aria-modal="true"
           >
-            {/* Backdrop */}
-            <button
-              aria-label="Close menu"
-              className="absolute inset-0 bg-black/70 z-0"
-              onClick={() => setIsMenuOpen(false)}
-            />
-
-            {/* Drawer Panel */}
-            <div className="absolute inset-y-0 right-0 w-[85%] sm:w-[22rem] bg-background border-l border-border/20 shadow-2xl z-10 h-dvh min-h-dvh flex flex-col pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] rounded-l-2xl">
+            <div className="flex h-full flex-col">
               {/* Top bar */}
               <div className="flex items-center justify-between px-4 py-4 border-b border-border/20">
                 <Link
@@ -149,7 +141,7 @@ export const Header = () => {
                   <img
                     src="https://www.laformulacg.net/_next/image?url=%2Fimages%2Flogo%2Flogo.png&w=128&q=75"
                     alt="La Formula Capital Group"
-                    className="h-10 w-auto"
+                    className="h-20 w-auto object-contain"
                   />
                 </Link>
                 <Button
@@ -163,40 +155,40 @@ export const Header = () => {
                 </Button>
               </div>
 
-              {/* Links */}
-              <nav className="px-2 py-4 flex-1 overflow-y-auto">
+              {/* Centered Links */}
+              <nav className="flex-1 flex flex-col items-center justify-center px-6 py-8 space-y-4 overflow-y-auto text-center">
                 <Link
                   to={`${basePath}/services`}
-                  className="block px-3 py-3 text-lg rounded-xl hover:bg-muted hover:text-primary text-foreground"
+                  className="w-full max-w-xs px-3 py-3 text-lg rounded-xl hover:bg-muted hover:text-primary text-foreground"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t("header.services")}
                 </Link>
                 <Link
                   to={`${basePath}/about`}
-                  className="block px-3 py-3 text-lg rounded-xl hover:bg-muted hover:text-primary text-foreground"
+                  className="w-full max-w-xs px-3 py-3 text-lg rounded-xl hover:bg-muted hover:text-primary text-foreground"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t("header.about")}
                 </Link>
                 <Link
                   to={`${basePath}/contact`}
-                  className="block px-3 py-3 text-lg rounded-xl hover:bg-muted hover:text-primary text-foreground"
+                  className="w-full max-w-xs px-3 py-3 text-lg rounded-xl hover:bg-muted hover:text-primary text-foreground"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t("header.contact")}
                 </Link>
                 <Link
                   to={`${basePath}/careers`}
-                  className="block px-3 py-3 text-lg rounded-xl hover:bg-muted hover:text-primary text-foreground"
+                  className="w-full max-w-xs px-3 py-3 text-lg rounded-xl hover:bg-muted hover:text-primary text-foreground"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t("header.careers")}
                 </Link>
 
                 {/* Language Selector */}
-                <div className="mt-4 border-t border-border/20 pt-4">
-                  <p className="px-3 pb-2 text-sm text-muted-foreground">
+                <div className="w-full max-w-xs mt-6 border-t border-border/20 pt-4">
+                  <p className="pb-2 text-sm text-muted-foreground">
                     {t('header.languages')}:
                   </p>
                   <div className="space-y-2">
@@ -205,7 +197,7 @@ export const Header = () => {
                         setLanguage('en');
                         setIsMenuOpen(false);
                       }}
-                      className="w-full text-left px-3 py-3 text-foreground hover:bg-muted hover:text-primary rounded-xl flex items-center text-base focus-visible:ring-2 focus-visible:ring-primary"
+                      className="w-full px-3 py-3 text-foreground hover:bg-muted hover:text-primary rounded-xl flex items-center justify-center text-base focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       {lang === 'en' && <Check className="mr-2 h-4 w-4" />}
                       English
@@ -215,7 +207,7 @@ export const Header = () => {
                         setLanguage('es');
                         setIsMenuOpen(false);
                       }}
-                      className="w-full text-left px-3 py-3 text-foreground hover:bg-muted hover:text-primary rounded-xl flex items-center text-base focus-visible:ring-2 focus-visible:ring-primary"
+                      className="w-full px-3 py-3 text-foreground hover:bg-muted hover:text-primary rounded-xl flex items-center justify-center text-base focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       {lang === 'es' && <Check className="mr-2 h-4 w-4" />}
                       Español

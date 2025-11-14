@@ -130,10 +130,10 @@ export const Careers = () => {
               <p className="text-lg">
                 {t('careers.send_resume')}{' '}
                 <a 
-                  href="mailto:careers@laformulacg.net" 
+                  href="mailto:contact@laformulacq.net" 
                   className="text-primary hover:underline font-semibold"
                 >
-                  careers@laformulacg.net
+                  contact@laformulacq.net
                 </a>
               </p>
             </div>
